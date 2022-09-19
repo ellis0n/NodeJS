@@ -6,4 +6,6 @@ You can run the individual .js files to see the readouts from the code, or the i
 
 Everything else is straight forward: I looked at 6 global objects and many of their methods. For NPM, I used lodash and
 
-As
+Github link:
+
+https://github.com/ellis0n/NodeJS
