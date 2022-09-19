@@ -136,3 +136,74 @@ console.log(path.isAbsolute("qap1/index.js")); // Prints false, no trailing path
 //Path can do a lot more but for the purposes of demoing requires a somewhat more elaborate file structure than I have time to make!
 
 // There are many more modules and objects to consider, and even these examples hardly explain what the above do.
+
+// Lodash is a library that provides functions for common tasks found in programming with Javascript.
+// To install dependencies:
+// npm init -y
+// npm i lodash
+
+// By convention, Lodash uses the "lower dash" or underscore to refer to the module:
+const _ = require("lodash");
+
+// Here we can see the module version being assigned and called.
+const version = _.VERSION;
+console.log(version);
+
+// Lodash methods like .first and .last allow us to return the first and last elements of an array:
+const array = ["one", "two", "three"];
+const first = _.first(array); // first is a module that calls on the array...
+const last = _.last(array); // last is too.
+console.log(first); // Prints "one"
+console.log(last); // Prints "three"
+
+// .random does what it says it does: generate a random number between two bounds:
+const random = _.random(1, 10);
+console.log(random); // Prints a random number
+
+// Whereas .sample does the same but for elements from an array:
+const array2 = ["one", "two", "three", "four"];
+console.log(_.sample(array2)); // Prints random element from array2
+
+// We can call a function multiple times using .times...
+_.times(3, () => {
+  console.log("Print me three times!"); //
+});
+let arr = _.times(4, () => _.random(2, 10)); // Combining with random...
+console.log(arr); // To get arrays of four random numbers between 2 and 10.
+
+// Range creates arrays too, but takes start, end and step parameters.
+const range = _.range(0, 10, 2); // Start, end and step (increase by)
+console.log(range); // 0, 2, 4, 6, 8 (Note end non-inclusive!)
+
+// Delay can delay the execution of a function for a specified number of milliseconds.
+const message = "Hey! I'm delayed. :)";
+function delayMessage() {
+  console.log(message);
+}
+_.delay(delayMessage, 1300);
+
+console.log("Please wait for the delay."); // Even though this line is later, it should print before the delayed message because of the 1300 ms wait.
+
+// Moment is a library for dates and times: validating, parsing, displaying and manipulating them, specifically.
+// Like Lodash, you install dependencies:
+// npm init -y
+// npm i moment
+
+// We have to initialize it also:
+moment = require("moment");
+
+// Obvious benefits include access the current time and formatting it:
+console.log(moment().format()); // Prints the whole date string
+console.log(moment().format("dddd")); // Prints the day only
+console.log(moment().format("MMM Do YYYY")); // Prints formatted date value
+console.log(moment().format("MMMM Do YYYY, h:mm:ss a")); // Ah, so readable!
+
+// We can find out time using relative terms...
+console.log(moment().startOf("day").fromNow()); // When did today start?
+console.log(moment().endOf("day").fromNow()); // When does it end?
+
+// And the calendar time method lets us format in a very readable manner:
+
+console.log(moment().add(10, "days").calendar()); // Ten days away...
+console.log(moment().add(1, "month").calendar()); // One month from today!
+console.log(moment().subtract(130, "year").calendar()); // 1892 (a QV beer classic)

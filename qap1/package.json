@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/ellis0n/NodeJS#readme",
   "dependencies": {
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "moment": "^2.29.4"
   }
 }
