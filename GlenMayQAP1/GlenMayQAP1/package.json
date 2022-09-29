@@ -1,0 +1,33 @@
+{
+  "name": "qap1",
+  "version": "1.0.0",
+  "description": "Simple scripts for submission under the first QAP in semester 3. Written by Glen May.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ellis0n/NodeJS.git"
+  },
+  "keywords": [
+    "qap1",
+    "nodejs",
+    "node",
+    "npm",
+    "npm",
+    "init",
+    "global",
+    "objects"
+  ],
+  "author": "Glen May",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ellis0n/NodeJS/issues"
+  },
+  "homepage": "https://github.com/ellis0n/NodeJS#readme",
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "moment": "^2.29.4"
+  }
+}
